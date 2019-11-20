@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
   Widget imageCarousel = new Container(
-    height: 250.0,
+    height: 220.0,
     child: new Carousel(
       boxFit: BoxFit.cover,
       images: [
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
         HorizontalListView(),
 
         //padding widget
-        new Padding(padding: const EdgeInsets.all(15.0),
+        new Padding(padding: const EdgeInsets.all(10.0),
           child: new Text('Recent products'),),
 
         //GridView
