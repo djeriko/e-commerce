@@ -9,18 +9,18 @@ class HorizontalListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Category(
-            image_location: 'images/cats/tshirt.png',
+            image_location: 'images/cats/keyboards.png',
+            image_caption: 'Keyboards',
+          ),
+
+          Category(
+            image_location: 'images/cats/mouses.jpg',
+            image_caption: 'Mouses',
+          ),
+
+          Category(
+            image_location: 'images/cats/tshirts.jpg',
             image_caption: 'T-Shirts',
-          ),
-
-          Category(
-            image_location: 'images/cats/shoe.png',
-            image_caption: 'Shoes',
-          ),
-
-          Category(
-            image_location: 'images/cats/jeans.png',
-            image_caption: 'Jeans',
           ),
           
           Category(

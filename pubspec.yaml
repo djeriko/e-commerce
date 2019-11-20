@@ -57,11 +57,26 @@ flutter:
     - images/cats/jeans.png
     - images/cats/shoe.png
     - images/cats/tshirt.png
+    - images/cats/keyboards.png
+    - images/cats/mouses.jpg
+    - images/cats/tshirts.jpg
     - images/products/blazer1.jpeg
     - images/products/dress1.jpeg
     - images/products/hills1.jpeg
     - images/products/pants1.jpg
     - images/products/shoe1.jpg
+    - images/main1.jpg
+    - images/main2.jpg
+    - images/main3.jpg
+    - images/main4.jpg
+    - images/main5.jpg
+    - images/main6.jpg
+    - images/products/chair.jpg
+    - images/products/headphone.jpg
+    - images/products/keyboard.jpg
+    - images/products/mouse.jpg
+    - images/products/tshirt.png
+    - images/logo.png
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 

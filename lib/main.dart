@@ -21,16 +21,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
   Widget imageCarousel = new Container(
-    height: 220.0,
+    height: 150.0,
     child: new Carousel(
       boxFit: BoxFit.cover,
       images: [
-        AssetImage('images/c1.jpg'),
-        AssetImage('images/m1.jpeg'),
-        AssetImage('images/m2.jpg'),
-        AssetImage('images/w1.jpeg'),
-        AssetImage('images/w3.jpeg'),
-        AssetImage('images/w4.jpeg'),
+        AssetImage('images/main1.jpg'),
+        AssetImage('images/main2.jpg'),
+        AssetImage('images/main3.jpg'),
+        AssetImage('images/main4.jpg'),
+        AssetImage('images/main5.jpg'),
+        AssetImage('images/main6.jpg'),
       ],
       autoplay: true,
       animationCurve: Curves.fastOutSlowIn,
@@ -43,8 +43,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: new AppBar(
           elevation: 0.1,
-          backgroundColor: Colors.red,
-          title: Text('Fashapp'),
+          backgroundColor: Colors.black87,
+          title: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset('images/logo.png', fit: BoxFit.fitHeight),
+          ),
           actions: <Widget>[
             new IconButton(
                 icon: Icon(Icons.search, color: Colors.white),
@@ -66,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                   child: Icon(Icons.person, color: Colors.white),
                 ),
               ),
-              decoration: new BoxDecoration(color: Colors.red),
+              decoration: new BoxDecoration(color: Colors.black87),
             ),
 
             //body
@@ -127,7 +130,6 @@ class _HomePageState extends State<HomePage> {
                 leading: Icon(Icons.help, color: Colors.green,),
               ),
             ),
-    
           ],
         ),
       ),

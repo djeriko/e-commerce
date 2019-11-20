@@ -8,32 +8,32 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   var product_list = [
     {
-      "name": "Blazer",
-      "picture": "images/products/blazer1.jpeg",
+      "name": "Sharkoon SG34",
+      "picture": "images/products/chair.jpg",
       "old_price": 120,
       "price": 85,
     },
     {
-      "name": "Red dress",
-      "picture": "images/products/dress1.jpeg",
+      "name": "HyperX Cloud",
+      "picture": "images/products/headphone.jpg",
       "old_price": 100,
       "price": 50,
     },
     {
-      "name": "Hills",
-      "picture": "images/products/hills1.jpeg",
+      "name": "Logitech G-r540",
+      "picture": "images/products/keyboard.jpg",
       "old_price": 120,
       "price": 85,
     },
     {
-      "name": "Pants",
-      "picture": "images/products/pants1.jpg",
+      "name": "PulseFire",
+      "picture": "images/products/mouse.jpg",
       "old_price": 120,
       "price": 85,
     },
     {
-      "name": "Shoe",
-      "picture": "images/products/shoe1.jpg",
+      "name": "NAVI tshirt",
+      "picture": "images/products/tshirt.png",
       "old_price": 120,
       "price": 85,
     },
