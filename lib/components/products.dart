@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:e_commerce/pages/product_details.dart';
 
 class Products extends StatefulWidget {
   @override
@@ -75,27 +77,30 @@ class Single_prod extends StatelessWidget {
         tag: prod_name,
         child: Material(
           child: InkWell(
-            onTap: () {},
+            onTap: () => Navigator.of(context).push(new CupertinoPageRoute(
+                //passing the values of the product to product_details page
+                builder: (context) => new ProductDetails(
+                      product_detail_name: prod_name,
+                      product_detail_new_price: prod_price,
+                      product_detail_old_price: prod_old_price,
+                      product_detail_picture: prod_picture,
+                    ))),
             child: GridTile(
                 footer: Container(
                   color: Colors.white70,
-                  child: ListTile(
-                      leading: Text(
+                  child: Row(children: <Widget>[
+                    Expanded(
+                      child: Text(
                         prod_name,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      title: Text(
-                        "\$$prod_price",
-                        style: TextStyle(
-                            color: Colors.red, fontWeight: FontWeight.w800),
-                      ),
-                      subtitle: Text(
-                        "\$$prod_old_price",
-                        style: TextStyle(
-                            color: Colors.black87,
-                            fontWeight: FontWeight.w800,
-                            decoration: TextDecoration.lineThrough),
-                      )),
+                    ),
+                    Text(
+                      "\$$prod_price",
+                      style: TextStyle(
+                          color: Colors.red, fontWeight: FontWeight.w800),
+                    ),
+                  ]),
                 ),
                 child: Image.asset(
                   prod_picture,

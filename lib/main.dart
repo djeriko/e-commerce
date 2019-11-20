@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
   Widget imageCarousel = new Container(
-    height: 150.0,
+    height: 110.0,
     child: new Carousel(
       boxFit: BoxFit.cover,
       images: [
@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
       animationDuration: Duration(milliseconds: 1000),
       dotSize: 4.0,
       indicatorBgPadding: 4.0,
+      dotBgColor: Colors.transparent,
     ),
   );
 
@@ -77,7 +78,7 @@ class _HomePageState extends State<HomePage> {
               onTap:(){},
               child: ListTile(
                 title: Text('Home page'),
-                leading: Icon(Icons.home),
+                leading: Icon(Icons.home, color: Colors.orange[700]),
               ),
             ),
 
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> {
               onTap:(){},
               child: ListTile(
                 title: Text('My account'),
-                leading: Icon(Icons.person),
+                leading: Icon(Icons.person, color: Colors.orange[700]),
               ),
             ),
             
@@ -93,23 +94,23 @@ class _HomePageState extends State<HomePage> {
               onTap:(){},
               child: ListTile(
                 title: Text('My Orders'),
-                leading: Icon(Icons.shopping_basket),
+                leading: Icon(Icons.shopping_basket, color: Colors.orange[700]),
               ),
             ),
             
             InkWell(
               onTap:(){},
               child: ListTile(
-                title: Text('Categories'),
-                leading: Icon(Icons.dashboard),
+                title: Text('Корзина'),
+                leading: Icon(Icons.shopping_cart, color: Colors.orange[700]),
               ),
             ),
 
             InkWell(
               onTap:(){},
               child: ListTile(
-                title: Text('Favourites'),
-                leading: Icon(Icons.favorite),
+                title: Text('Избранное'),
+                leading: Icon(Icons.favorite, color: Colors.orange[700]),
               ),
             ),
 
@@ -119,7 +120,7 @@ class _HomePageState extends State<HomePage> {
               onTap:(){},
               child: ListTile(
                 title: Text('Settings'),
-                leading: Icon(Icons.settings, color: Colors.blue,),
+                leading: Icon(Icons.settings),
               ),
             ),
             
@@ -127,7 +128,7 @@ class _HomePageState extends State<HomePage> {
               onTap:(){},
               child: ListTile(
                 title: Text('About'),
-                leading: Icon(Icons.help, color: Colors.green,),
+                leading: Icon(Icons.help),
               ),
             ),
           ],
@@ -139,14 +140,14 @@ class _HomePageState extends State<HomePage> {
 
         //padding widget 
         new Padding(padding: const EdgeInsets.all(8.0),
-        child: new Text('Categories')), 
+        child: new Text('Категории')), 
 
         //Horizontal list view begins here
         HorizontalListView(),
 
         //padding widget
         new Padding(padding: const EdgeInsets.all(10.0),
-          child: new Text('Recent products'),),
+          child: new Text('Популярное'),),
 
         //GridView
         Container(
