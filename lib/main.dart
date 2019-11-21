@@ -1,9 +1,12 @@
+import 'package:e_commerce/components/drawer.dart';
+import 'package:e_commerce/pages/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
 //my own imports
 import 'package:e_commerce/components/horizontal_listview.dart';
 import 'package:e_commerce/components/products.dart';
+import 'package:e_commerce/components/appbar.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -42,98 +45,8 @@ class _HomePageState extends State<HomePage> {
   );
 
     return Scaffold(
-      appBar: new AppBar(
-          elevation: 0.1,
-          backgroundColor: Colors.black87,
-          title: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('images/logo.png', fit: BoxFit.fitHeight),
-          ),
-          actions: <Widget>[
-            new IconButton(
-                icon: Icon(Icons.search, color: Colors.white),
-                onPressed: () {}),
-            new IconButton(
-                icon: Icon(Icons.shopping_cart, color: Colors.white),
-                onPressed: () {}),
-          ]),
-      drawer: new Drawer(
-        child: new ListView(
-          children: <Widget>[
-            //header
-            new UserAccountsDrawerHeader(
-              accountName: Text('Fedor Dostoyevskiy'),
-              accountEmail: Text('genius@mail.com'),
-              currentAccountPicture: GestureDetector(
-                child: new CircleAvatar(
-                  backgroundColor: Colors.grey,
-                  child: Icon(Icons.person, color: Colors.white),
-                ),
-              ),
-              decoration: new BoxDecoration(color: Colors.black87),
-            ),
-
-            //body
-            InkWell(
-              onTap:(){},
-              child: ListTile(
-                title: Text('Home page'),
-                leading: Icon(Icons.home, color: Colors.orange[700]),
-              ),
-            ),
-
-            InkWell(
-              onTap:(){},
-              child: ListTile(
-                title: Text('My account'),
-                leading: Icon(Icons.person, color: Colors.orange[700]),
-              ),
-            ),
-            
-            InkWell(
-              onTap:(){},
-              child: ListTile(
-                title: Text('My Orders'),
-                leading: Icon(Icons.shopping_basket, color: Colors.orange[700]),
-              ),
-            ),
-            
-            InkWell(
-              onTap:(){},
-              child: ListTile(
-                title: Text('Корзина'),
-                leading: Icon(Icons.shopping_cart, color: Colors.orange[700]),
-              ),
-            ),
-
-            InkWell(
-              onTap:(){},
-              child: ListTile(
-                title: Text('Избранное'),
-                leading: Icon(Icons.favorite, color: Colors.orange[700]),
-              ),
-            ),
-
-            Divider(),
-
-            InkWell(
-              onTap:(){},
-              child: ListTile(
-                title: Text('Settings'),
-                leading: Icon(Icons.settings),
-              ),
-            ),
-            
-            InkWell(
-              onTap:(){},
-              child: ListTile(
-                title: Text('About'),
-                leading: Icon(Icons.help),
-              ),
-            ),
-          ],
-        ),
-      ),
+      appBar: MyAppBar(), 
+      drawer: MyDrawer(), 
       body: new ListView(children: <Widget>[
         //image carousel begins here
         imageCarousel,
